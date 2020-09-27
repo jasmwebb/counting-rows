@@ -1,24 +1,26 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import { countersStore } from "../store";
+	import CounterStore from "../store";
 
 	export let counter;
 
 	function addRow() {
 		counter.currentRows += 1;
+		$CounterStore = $CounterStore;
 	}
 
 	function removeRow() {
 		counter.currentRows -= 1;
+		$CounterStore = $CounterStore;
 	}
 
 	function resetRows() {
 		counter.currentRows = 0;
+		$CounterStore = $CounterStore;
 	}
 
 	function removeCounter() {
-		console.log($countersStore);
-		$countersStore = $countersStore.filter(checkCounter => {
+		$CounterStore = $CounterStore.filter(checkCounter => {
 			if (checkCounter.id !== counter.id) return checkCounter;
 		});
 	}
