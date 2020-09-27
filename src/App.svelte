@@ -4,7 +4,7 @@
 	import CounterStore from "./store";
 </script>
 
-<main>
+<main class="container min-h-screen my-6 flex flex-wrap items-start justify-center space-y-6">
 	{#each $CounterStore as counter}
 		<Counter {counter} />
 	{/each}
