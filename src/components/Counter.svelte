@@ -24,11 +24,15 @@
 			if (checkCounter.id !== counter.id) return checkCounter;
 		});
 	}
+
+	function editText(event) {
+		$CounterStore = $CounterStore;
+	}
 </script>
 
 <article class="px-8 py-2 md:w-1/4 md:px-2" transition:fade>
 	<div class="bg-white border border-pink-200 border-opacity-50 shadow-sm rounded-sm p-5 text-center">
-		<h2>{counter.name}</h2>
+		<input class="w-full text-center" bind:value={counter.name} on:keydown={editText}>
 		<hr class="my-2 bg-pink-200 no-border">
 		<h3 class="text-pink-200 uppercase font-semibold">Completed Rows</h3>
 		<p><span class="text-6xl">{counter.currentRows}</span> <span class="font-bold text-pink-200">/ {counter.maxRows}</span></p>
