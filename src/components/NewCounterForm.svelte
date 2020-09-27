@@ -23,7 +23,7 @@
   }
 </script>
 
-<article class="w-1/4 p-2">
+<article class="px-8 py-2 md:w-1/4 md:px-2">
   <div class="bg-white border border-pink-200 border-opacity-50 shadow-sm rounded-sm px-3 py-6 text-center">
     <input class="w-full mb-6 p-2 border-bottom" bind:value={counterName}>
     <input class="w-full mb-6 p-2 border-bottom" type=number bind:value={maxRows} min=0>
