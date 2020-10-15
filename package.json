@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "watch:tailwind": "postcss public/tailwind.css -o public/global.css -w",
-    "build:tailwind": "postcss NODE_ENV=production public/tailwind.css -o public/global.css",
-    "build": "npm run build:tailwind && rollup -c",
+    "build:tailwind": "postcss public/tailwind.css -o public/global.css",
+    "build": "NODE_ENV=production npm run build:tailwind && rollup -c",
     "dev": "concurrently \"rollup -c -w\" \"npm run watch:tailwind\"",
     "start": "sirv public"
   },
